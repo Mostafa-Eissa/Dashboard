@@ -1,0 +1,1939 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+
+}
+
+
+
+body {
+    background-color: #eee;
+    font-family: "Open Sans", sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+ul {
+    list-style: none;
+}
+
+
+
+
+.dashboard {
+    display: flex;
+}
+
+.dashboard .menu {
+    height: 160vh;
+    width: 250px;
+    background-color: white;
+    box-shadow: -1px 0px 9px black;
+    position: relative;
+
+}
+@media(max-width:767px){
+    .dashboard .menu{
+    height: 420vh;
+    }
+}
+
+.dashboard .menu .logo{
+    width: 250px;
+    height: 60px;
+    text-align: center;
+    
+    
+}
+
+.dashboard .menu .logo p {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    position: relative;
+}
+
+
+.dashboard .menu .logo p::before{
+    content: "";
+    height: 4px;
+    width: 100px;
+    background-color: black;
+    position: absolute;
+    bottom: -19px;
+    left: 78px;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+
+.dashboard .menu .logo p::after{
+    content: "";
+    width: 10px;
+    height: 10px;
+    background-color: black;
+    border-radius: 50%;
+    
+    position: absolute;
+    border: 4px solid white;
+    bottom: -25px;
+    left: 120px;
+}
+
+
+.dashboard .menu .mobile{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: none;
+    justify-content: center;
+    gap: 30px;
+}
+
+.dashboard .menu .mobile i {
+    color: black;
+    font-size: 35px;
+    position: relative;
+}
+
+.dashboard .menu .mobile img{
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    
+}
+
+@media (max-width: 767px){
+    
+    .dashboard .menu .logo{
+        text-align: left;
+        height: 27px;
+        width: 70px;
+    }
+    .dashboard .menu .logo p{
+            padding: 15px;
+            font-size: 14px !important;
+            font-weight: bold;
+            position: relative;
+    }
+        .dashboard .menu .logo p::before{
+            display: none;
+        }
+        .dashboard .menu .logo p::after{
+            display: none;
+        }
+
+    
+
+    
+}
+
+
+.dashboard .menu .lists{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 220px;
+    
+}
+
+
+ .btndash ,  .btnsetting ,  .btnprofile , .btnprojects ,.btnacademy , .btnfriends , .btnform ,.btnTicket , .btnfile , .btnsubscribe , .btmtrash{
+    display: flex;
+    gap: 20px;
+    cursor: pointer;
+    padding: 10px 20px;
+    
+}
+
+.btndash i ,  .btnsetting i , .btnprofile i ,  .btnprojects i , .btnacademy i , .btnfriends i , .btnform i , .btnTicket i , .btnfile i , .btnsubscribe i , .btmtrash i{
+    position: relative;
+    top: 1px;
+    font-size: 16px;
+}
+
+ .btndash p , .btnsetting p ,.btnprofile p  , .btnfriends p , .btnform p  , .btnfile p , .btmtrash p {
+    font-size: 16px;
+    
+}
+
+.btnprojects p , .btnacademy p , .btnTicket p , .btnsubscribe p{
+    font-size: 16px;
+    margin-left: -8px;
+}
+
+
+
+
+.dashboard .menu .lists .active{
+    background-color: #eee;
+}
+
+@media (max-width : 767px){
+    .dashboard .menu{
+        width: 72px;
+    }
+    .dashboard .menu .lists{
+        width: 60px !important;
+        max-width:60px;
+    }
+         .btndash p,
+         .btnsetting p,
+         .btnprofile p,
+         .btnfriends p,
+         .btnform p,
+         .btnfile p,
+         .btmtrash p,.btnprojects p,
+        .btnacademy p,
+        .btnTicket p,
+        .btnsubscribe p{
+            display: none;
+         }
+}
+
+
+/* end menu*/
+.main{
+    flex: 1;
+}
+.main .header{
+    height: 60px;
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.main .header form {
+    display: flex;
+    align-items: center;
+    margin-left: 20px;
+    position: relative;
+    
+}
+
+
+.main .header form i{
+    color: #999;
+    font-size: 20px;
+    position: absolute;
+    left: 7px;
+    z-index: 1;
+}
+.main .header form input {
+    border: 2px solid #999;
+    height: 40px;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    padding-left: 35px;
+    padding-right: 10px;
+    
+}
+
+.main .header form input:focus{
+    outline: none;
+}
+
+.main .user {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    margin-right: 30px;
+}
+
+.main .user img{
+    height: 35px;
+    width: 35px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    cursor: pointer;
+    
+}
+
+.main .user i {
+    color: black;
+    font-size: 25px;
+    position: relative;
+}
+
+@media(max-width:767px){
+    .main .header form input{
+        width: 140px;
+    }
+        .main .header form input::placeholder{
+            font-size: 10px;
+        }
+}
+
+.uersSign::after{
+    font-family: "Font Awesome 5 Free";
+    content: "\f0de";
+    font-weight: 900;
+    font-size: 50px;
+    color: white;
+    position: absolute;
+    top: -22px;
+    right: 20px;
+    
+}
+
+
+.main .maincontent , .setting , .profile , .projects , .courses , .friends , .files , .plans{
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.main .maincontent .heading , .setting .heading  , .profile .heading , .projects .heading , .courses .heading, .friends .heading , .files .heading, .plans .heading{
+width: 100%;
+
+}
+
+.main .maincontent .heading h3,.main .setting .heading h3 ,.main .profile .heading h3 , .projects .heading h3 , .courses .heading h3 ,.friends .heading h3 , .files .heading h3 , .plans .heading h3{
+    font-size: 25px;
+    position: relative;
+}
+
+.main .maincontent .heading div , .main .setting .heading div , .main .profile .heading div  ,.projects .heading div ,  .courses .heading div ,.friends .heading div ,.files .heading div , .plans .heading div{
+    height: 4px;
+    width: 55px;
+    background-color: black;
+    position: relative;
+    top: 4px;
+}
+
+
+
+.main .maincontent .mainboxs {
+    display: grid;
+    grid-template-columns: repeat(auto-fill , minmax(300px , 1fr));
+    gap: 10px;
+    
+    width: 100%;
+}
+
+
+@media (max-width:767px){
+
+    .main .maincontent .mainboxs{
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    }
+    .main .maincontent .mainboxs .box .up{
+        display: none !important;
+    }
+    .main .maincontent .mainboxs .box .down{
+        flex-direction: column;
+        
+        width: 245px;
+    }
+    
+}
+.main .maincontent .mainboxs .box{
+    padding: 10px;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    overflow: hidden;
+}
+
+.main .maincontent .mainboxs .spoecal{
+background-color: #eee !important;
+}
+.main .maincontent .mainboxs .box .up {
+   display: flex;
+   justify-content: space-between;
+   overflow: hidden;
+}
+
+.main .maincontent .mainboxs .box .up .welcome h4{
+    font-size: 20px;
+}
+
+.main .maincontent .mainboxs .box .up .welcome p{
+    color: #999;
+}
+
+.main .maincontent .mainboxs .box .up img{
+    width: 230px;
+    height: 80px;
+    margin-bottom: 20px;
+}
+
+.main .maincontent .mainboxs .box .down{
+    background-color: white;
+    display: flex;
+    position: relative;
+    padding: 10px;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+
+.main .maincontent .mainboxs .box .down img{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    
+    border: 3px solid white;
+}
+
+
+.main .maincontent .mainboxs .box .down .boxpro{
+    text-align: center;
+}
+
+.main .maincontent .mainboxs .box .down .boxpro p{
+    color: #999;
+    margin-top: 10px;
+}
+
+.main .maincontent .mainboxs .box .down .btnd{
+
+    background-color: cornflowerblue;
+    padding: 10px 20px;
+    color: white;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+@media (min-width:768px){
+    .main .maincontent .mainboxs .box .down .btnd {
+            position: absolute;
+            bottom: 15px;
+            right: 30px;
+            background-color: cornflowerblue;
+            padding: 10px 20px;
+            color: white;
+            border-radius: 5px;
+            -webkit-border-radius: 5px;
+            -moz-border-radius: 5px;
+            -ms-border-radius: 5px;
+            -o-border-radius: 5px;
+        }
+
+    .main .maincontent .mainboxs .box .down img {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            -webkit-border-radius: 50%;
+            -moz-border-radius: 50%;
+            -ms-border-radius: 50%;
+            -o-border-radius: 50%;
+            position: absolute;
+            top: -30px;
+            left: 17px;
+            border: 3px solid white;
+        }
+    .main .maincontent .mainboxs .box .down{
+        height: 200px;
+    }
+}
+
+
+
+.main .maincontent .mainboxs .box{
+    background-color: white;
+}
+
+.main .maincontent .mainboxs .box{
+    display: flex;
+    flex-direction: column;
+}
+
+.main .maincontent .mainboxs .box .headDarft{
+    padding: 10px;
+
+}
+
+
+.main .maincontent .mainboxs .box .headDarft h2{
+    font-size: 20px;
+}
+.main .maincontent .mainboxs .box .headDarft p{
+    margin-top: 10px;
+    color: #999;
+    font-size: 14px;
+}
+
+.main .maincontent .mainboxs .box form{
+    padding: 10px;
+}
+
+.main .maincontent .mainboxs .box form input{
+    margin-bottom: 10px;
+    background-color: rgb(223, 223, 223);
+    border: none;
+    padding: 10px;
+    padding-left: 20px;
+    width: 100%;
+}
+
+.main .maincontent .mainboxs .box form input:focus{
+    outline: none;
+}
+
+.main .maincontent .mainboxs .box form textarea{
+    width: 100%;
+    resize: none;
+    background-color: rgb(223, 223, 223);
+    border: none;
+    padding: 10px;
+    height: 100px;
+}
+
+.main .maincontent .mainboxs .box form textarea:focus{
+    outline: none;
+}
+
+.main .maincontent .mainboxs .box .btnr{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 10px;
+    
+}
+
+.main .maincontent .mainboxs .box .btnr p {
+    padding: 10px;
+    color: white;
+    background-color: cornflowerblue;
+    width: fit-content;
+    padding: 10px 20px;
+    border-radius:5px ;
+    -webkit-border-radius:5px ;
+    -moz-border-radius:5px ;
+    -ms-border-radius:5px ;
+    -o-border-radius:5px ;
+    cursor: pointer;
+    
+}
+
+.main .maincontent .mainboxs .box .signDollar , .main .maincontent .mainboxs .box .signCode , .signUser {
+    display: flex;
+    gap: 10px;
+    padding: 10px;
+    margin-bottom: 5px;
+}
+
+.main .maincontent .mainboxs .box .signDollar .signDollarImg {
+    background-color: rgb(25 200 250 / 30%);
+    height: 50px;
+    width: 50px;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main .maincontent .mainboxs .box .signUser .signUserImg{
+    background-color: rgba(21, 252, 0, 0.3);
+    height: 50px;
+    width: 50px;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main .maincontent .mainboxs .box .signCode .signCodeImg {
+    background-color: rgba(255, 238, 0, 0.479);
+        height: 50px;
+        width: 50px;
+    
+        display: flex;
+        justify-content: center;
+        align-items: center;
+}
+
+.main .maincontent .mainboxs .box .signCode .signCodeImg i{
+    color: rgb(212, 181, 0);
+}
+
+.main .maincontent .mainboxs .box .signDollar .signDollarImg i {
+    color: #19c8fa;
+}
+
+.main .maincontent .mainboxs .box .signUser .signUserImg{
+    color: rgb(21,252,0) ;
+}
+
+.main .maincontent .mainboxs .box .signDollar .signDollarText , .main .maincontent .mainboxs .box .signCode .signCodeText , .signUserText {
+    flex: 1;
+}
+.main .maincontent .mainboxs .box .signDollar .signDollarText p , .main .maincontent .mainboxs .box .signCode .signCodeText p , .signUserText p{
+    font-size: 14px;
+    color: #999;
+    margin-bottom: 5px;
+    
+}
+
+.main .maincontent .mainboxs .box .signDollar .signDollarText h5 , .main .maincontent .mainboxs .box .signCode .signCodeText h5 , .signUserText h5{
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.main .maincontent .mainboxs .box .signDollar .signDollarText div {
+    height: 4px;
+    width: 100%;
+    background-color: rgb(25 200 250 / 30%);;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    position: relative;
+    z-index: 1;
+}
+
+.signUserText div{
+    height: 4px;
+    width: 100%;
+    background-color: rgba(21, 252, 0, 0.3);
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    position: relative;
+    z-index: 1;
+}
+
+.main .maincontent .mainboxs .box .signCode .signCodeText div{
+    height: 4px;
+    width: 100%;
+    background-color: rgba(255, 238, 0, 0.479);
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    position: relative;
+    z-index: 1;
+}
+
+.main .maincontent .mainboxs .box .signDollar .signDollarText .fill{
+    position: absolute;
+    display: block;
+    width: 0%;
+    height: 4px;
+    background-color: #19c8fa;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    animation-name: move;
+    animation-duration: 3s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+    z-index: 2;
+}
+
+.main .maincontent .mainboxs .box .signCode .signCodeText .fill{
+    position: absolute;
+        display: block;
+        width: 0%;
+        height: 4px;
+        background-color: rgb(212, 181, 0);
+        border-radius: 10px;
+        -webkit-border-radius: 10px;
+        -moz-border-radius: 10px;
+        -ms-border-radius: 10px;
+        -o-border-radius: 10px;
+        animation-name: move2;
+        animation-duration: 3s;
+        animation-timing-function: linear;
+        animation-fill-mode: forwards;
+        z-index: 2;
+}
+
+.signUserText .fill{
+    position: absolute;
+        display: block;
+        width: 0%;
+        height: 4px;
+        background-color: rgb(21, 252, 0);
+        border-radius: 10px;
+        -webkit-border-radius: 10px;
+        -moz-border-radius: 10px;
+        -ms-border-radius: 10px;
+        -o-border-radius: 10px;
+        animation-name: move3;
+        animation-duration: 3s;
+        animation-timing-function: linear;
+        animation-fill-mode: forwards;
+        z-index: 2;
+}
+
+@keyframes move {
+    100%{
+        width: 50%;
+    }
+}
+
+@keyframes move2 {
+    100% {
+        width: 70%;
+    }
+}
+
+@keyframes move3 {
+    100% {
+        width: 90%;
+    }
+}
+
+.mainboxs .box .maitainboxs {
+    display: grid;
+    grid-template-columns: repeat(auto-fill , minmax(140px ,1fr));
+    gap: 10px;
+    padding: 10px;
+}
+
+.mainboxs .box .maitainboxs .maintian {
+    text-align: center;
+    border: 1px solid #999;
+    border-radius: 5px;
+    padding: 10px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+
+.mainboxs .box .maitainboxs .maintian h2{
+    margin-bottom: 5px;
+}
+
+.mainboxs .box .maitainboxs .maintian p{
+    font-size: 12px;
+    color: #999;
+}
+
+.mainboxs .box .maitainboxs .maintian .ticket{
+    font-size: 20px;
+    color: rgb(212, 181, 0);
+    margin-bottom: 5px;
+}
+
+.mainboxs .box .maitainboxs .maintian .loading{
+    color: #19c8fa;
+    margin-bottom: 5px;
+    font-size: 20px;
+}
+
+.mainboxs .box .maitainboxs .maintian .check{
+    color:rgb(21, 252, 0);
+    margin-bottom: 5px;
+    font-size: 20px;
+}
+
+.mainboxs .box .maitainboxs .maintian .close{
+    color: red;
+    margin-bottom: 5px;
+    font-size: 20px;
+}
+
+
+.box .box1 {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid rgb(199, 199, 199) ;
+    margin-bottom: 10px;
+}
+
+.box .box1 img{
+    height: 50px;
+    width: 80px;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+.box .box1 .boxContent{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.box .box1 .boxContent h2{
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.box .box1 .boxContent p {
+    font-size: 13px;
+    color: #999;
+}
+
+
+.box .box1 .lasttime {
+    background-color: #999;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 10px;
+    margin-left: 10px;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    flex-wrap: nowrap;
+    cursor: pointer;
+}
+
+@media (max-width:767px){
+    .box .box1{
+        flex-direction: column;
+    }
+
+    .box .box1 img{
+        height: 80px;
+        width: 150px;
+        margin: 0 auto;
+        margin-bottom: 20px;
+    }
+
+    .box .box1 .boxContent p{
+        margin-bottom: 20px;
+    }
+    .box .box1 .lasttime{
+        margin-bottom: 20px;
+    }
+}
+
+.box .trash{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    border-bottom: 1px solid rgb(199, 199, 199);
+    padding: 10px;
+    align-items: center;
+}
+
+
+.box .trash .trashContent {
+    margin-bottom: 10px;
+}
+
+.box .trash .trashContent p {
+    color: #999;
+    margin-top: 5px;
+}
+
+.box .trash i {
+    cursor: pointer;
+}
+
+
+.main .setting .mainbox {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill , minmax(400px , 1fr));
+    gap: 10px;
+
+}
+
+@media (max-width:767px){
+    .main .setting .mainbox{
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    }
+        .main .setting .mainbox .box .darkmode p,
+        .mainbox .website p{
+            font-size: 12px !important;
+        }
+}
+
+.main .setting .mainbox .box{
+    padding: 10px;
+    background-color: white;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+
+.main .setting .mainbox .box .headbox h2 {
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+.main .setting .mainbox .box .headbox p{
+    margin-top: 10px;
+    color: #999;
+    font-size: 18px;
+}
+
+.main .setting .mainbox .box .darkmode , .mainbox .website  {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.main .setting .mainbox .box .darkmode p , .mainbox .website p{
+    margin-top: 10px;
+    color: #999;
+    font-size: 14px;
+}
+
+.main .setting .mainbox .box .darkicon {
+    width: 80px;
+    height: 30px;
+    background-color: black;
+    position: relative;
+    display: flex;
+    align-items: center;
+    animation-duration: 0s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+    border-radius: 30px;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    -ms-border-radius: 30px;
+    -o-border-radius: 30px;
+    padding-left: 5px;
+    padding-right: 5px;
+    margin-right: 5px;
+}
+
+.mainbox .website .websiteIcon , .mainbox .twofactor .websiteIcon{
+    width: 80px;
+        height: 30px;
+        background-color:#555 ;
+        position: relative;
+        display: flex;
+        align-items: center;
+        animation-duration: 0s;
+        animation-timing-function: linear;
+        animation-fill-mode: forwards;
+        border-radius: 30px;
+        -webkit-border-radius: 30px;
+        -moz-border-radius: 30px;
+        -ms-border-radius: 30px;
+        -o-border-radius: 30px;
+        padding-left: 5px;
+        padding-right: 5px;
+        margin-right: 5px;
+}
+
+.mainbox .website .websiteIcon .done , .mainbox .twofactor .websiteIcon .done{
+    display: none;
+    justify-content: flex-end;
+}
+.mainbox .website .websiteIcon .cancel ,.mainbox .twofactor .websiteIcon .cancel {
+    
+    justify-content: flex-start;
+}
+
+.main .setting .mainbox .box .darkicon .btn {
+    background-color: transparent;
+    border: none;
+    outline: none;
+   
+}
+
+.main .setting .mainbox .box .darkicon .btn i , .mainbox .website .websiteIcon i , .mainbox .twofactor .websiteIcon i {
+    color: white;
+    padding-left: 5px;
+    font-size: 18px;
+}
+
+@keyframes moveone {
+    100% {
+        justify-content: flex-end;
+        background-color: #555;
+        
+    }
+}
+
+@keyframes movetwo {
+    100% {
+        justify-content: flex-start;
+        background-color: black;
+        
+    }
+}
+
+
+.main .setting .mainbox .box textarea{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    resize: none;
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    height: 135px;
+}
+
+.main .setting .mainbox .box textarea:focus{
+    outline: none;
+}
+
+.main .setting .mainbox .box .inputfrist , .main .setting .mainbox .box .inputlast, .main .setting .mainbox .box .inputemail{
+    margin-top: 20px;
+}
+
+.main .setting .mainbox .box .inputfrist p ,.main .setting .mainbox .box .inputlast p , .main .setting .mainbox .box .inputemail p{
+    margin-bottom: 10px;
+    color: #999;
+}
+
+.main .setting .mainbox .box .inputfrist input ,.main .setting .mainbox .box .inputlast input{
+    width: 95%;
+    padding: 10px;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    border-color: #999;
+}
+
+.main .setting .mainbox .box .inputfrist input:focus , .main .setting .mainbox .box .inputlast input:focus ,
+.main .setting .mainbox .box .inputemail input:focus{
+    outline: none;
+}
+
+
+.main .setting .mainbox .box .inputemail .inputchange{
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+
+.main .setting .mainbox .box .inputemail .inputchange input{
+        width: 80%;
+        padding: 10px;
+        border-radius: 5px;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        -ms-border-radius: 5px;
+        -o-border-radius: 5px;
+        border-color: #999;
+}
+
+.main .setting .mainbox .box .inputemail .inputchange p{
+    color: cornflowerblue;
+    cursor: pointer;
+}
+
+
+.main .setting .mainbox .box .password , .main .setting .mainbox .box .twofactor{
+    margin-top: 20px;
+    border-bottom: 1px solid #999;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.main .setting .mainbox .box .password .passwordtext p , .main .setting .mainbox .box .twofactor .twofactortext p{
+    margin-top: 10px;
+    color: #999;
+    font-size: 14px;
+    margin-bottom: 20px;
+
+}
+
+.main .setting .mainbox .box .password .btnchange{
+    background-color: cornflowerblue;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    cursor: pointer;
+}
+
+.main .setting .mainbox .box .password .btnchange2 {
+    background-color: #555;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    cursor: pointer;
+}
+
+
+.main .setting .mainbox .box form{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.main .setting .mainbox .box  .mainTwiter , .main .setting .mainbox .box .mainfacebook , .main .setting .mainbox .box .mianLlinkedin , .mainyoutube{
+    width: 100%;
+    position: relative;
+}
+
+.main .setting .mainbox .box form .mainTwiter .twitter{
+    height: 30px;
+    padding: 20px;
+    padding-left: 55px;
+    background-color: #eee;
+    border: 2px solid #555;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    width: 100%;
+}
+
+.main .setting .mainbox .box .twti{
+    position: absolute;
+    color: black;
+    font-size: 20px;
+    left: 3px;
+    top: 0px;
+    padding: 11px;
+    border-right: 2px solid #555;
+    
+}
+
+.main .setting .mainbox .box .twitter:focus , .main .setting .mainbox .box .mainfacebook .facebook:focus ,
+.main .setting .mainbox .box .mianLlinkedin .linkedin , .mainyoutube .youtube {
+    outline: none;
+}
+
+
+.main .setting .mainbox .box .mainfacebook .facebook{
+        height: 30px;
+        padding: 20px;
+        padding-left: 55px;
+        background-color: #eee;
+        border: 2px solid #555;
+        border-radius: 5px;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        -ms-border-radius: 5px;
+        -o-border-radius: 5px;
+        width: 100%;
+}
+
+.main .setting .mainbox .box .face {
+    position: absolute;
+    color: #555;
+    font-size: 20px;
+    left: 3px;
+    top: 0px;
+    padding: 12px;
+    padding-left: 15px;
+    padding-right: 14px;
+    border-right: 2px solid #555;
+
+}
+
+
+.mainbox .box .mianLlinkedin .linkedin{
+    height: 30px;
+    padding: 20px;
+    padding-left: 55px;
+    background-color: #eee;
+    border: 2px solid #555;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    width: 100%;
+}
+
+
+.mainbox .box .mianLlinkedin .liny{
+    position: absolute;
+    color: #555;
+    font-size: 20px;
+    left: 3px;
+    top: 0px;
+    padding: 12px;
+    padding-left: 12px;
+    padding-right: 12px;
+    border-right: 2px solid #555;
+}
+
+.mainyoutube .youtube{
+    height: 30px;
+        padding: 20px;
+        padding-left: 55px;
+        background-color: #eee;
+        border: 2px solid #555;
+        border-radius: 5px;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        -ms-border-radius: 5px;
+        -o-border-radius: 5px;
+        width: 100%;
+}
+
+.mainbox .box .mainyoutube .yuop{
+    position: absolute;
+        color: #555;
+        font-size: 20px;
+        left: 3px;
+        top: 0px;
+        padding: 12px;
+        padding-left: 10px;
+        padding-right: 9px;
+        border-right: 2px solid #555;
+}
+
+
+.box .checkboxSetting  div{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    font-weight: bold;
+    font-size: 14px;
+    
+}
+
+.box .checkboxSetting div p{
+    position: relative;
+    top: -3px;
+}
+
+.box .checkboxSetting input{
+    width: 20px;
+    height: 20px;
+    margin-bottom: 10px;
+    
+}
+
+
+.box .boxServer{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 10px;
+    border-top: 1px solid #555;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.box .boxServer .box{
+    width: 120px;
+    border: 1px solid #999;
+    text-align: center;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    height: 60px;
+}
+
+.box .boxServer .box i{
+    margin-bottom: 5px;
+}
+
+
+.profile .mainboxP{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    gap: 10px;
+}
+
+.profile .mainboxP .mainprofile{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: white;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+
+.profile .mainboxP .mainprofile .imgprofile{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    border-right: 1px solid #999;
+}
+
+@media(max-width:767px){
+    .profile .mainboxP .mainprofile .imgprofile{
+        border-bottom: 1px solid #999;
+        border-right:none;
+        padding: 42px;
+    }
+}
+
+.profile .mainboxP .mainprofile .imgprofile img{
+    height: 120px;
+    width: 120px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+
+.profile .mainboxP .mainprofile .imgprofile h2{
+    letter-spacing: -1px;
+}
+
+.profile .mainboxP .mainprofile .imgprofile p{
+    color: #999;
+}
+
+.profile .mainboxP .mainprofile .imgprofile div{
+    height: 8px;
+    width: 180px;
+    background-color: #eee;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    position: relative;
+}
+
+.profile .mainboxP .mainprofile .imgprofile div span{
+    height: 8px;
+    width: 80%;
+    position: absolute;
+    background-color: cornflowerblue;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+
+.profile .mainboxP .mainprofile .imgprofile ul{
+    display: flex;
+    color: orange;
+    gap: 5px;
+}
+
+.profile .mainboxP .mainprofile .imgprofile span{
+    font-size: 12px;
+    color: #999;
+}
+
+
+.profile .mainboxP .mainprofile .contentprofile{
+    width: 100%;
+    background-color: white;
+    flex: 1;
+    border-radius: 5px;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        -ms-border-radius: 5px;
+        -o-border-radius: 5px;
+    
+}
+
+.profile .mainboxP .mainprofile .contentprofile .general h4  ,.general2 h4{
+    color: #999;
+    
+    padding: 10px;
+    
+}
+
+.profile .mainboxP .mainprofile .contentprofile .general , .general2{
+    border-bottom: 1px solid #999;
+}
+
+.general4{
+    border: none;
+}
+
+.general:hover,
+.general2:hover{
+    background-color: rgb(236, 230, 230);
+}
+
+.profile .mainboxP .mainprofile .contentprofile .general .generalText , .general2 .generalText{
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 10px;
+    
+    
+}
+
+
+
+.profile .mainboxP .mainprofile .contentprofile .general .generalText p , .general2 .generalText p{
+    font-size: 14px;
+    color: #999;
+    width: 230px;
+    margin-bottom: 10px;
+}
+
+.profile .mainboxP .mainprofile .contentprofile .general .generalText p span ,  .general2 .generalText p span{
+    color: black;
+}
+
+
+.profile .mainboxP .mainprofile .contentprofile .general .generalText .websiteIcon , .general2 .generalText .websiteIcon{
+        width: 80px;
+        height: 30px;
+        background-color: #555;
+        position: relative;
+        display: flex;
+        align-items: center;
+        animation-duration: 0s;
+        animation-timing-function: linear;
+        animation-fill-mode: forwards;
+        border-radius: 30px;
+        -webkit-border-radius: 30px;
+        -moz-border-radius: 30px;
+        -ms-border-radius: 30px;
+        -o-border-radius: 30px;
+        padding-left: 5px;
+        padding-right: 5px;
+        margin-bottom: 10px;
+}
+
+
+.profile .mainboxP .mainprofile .contentprofile .general .generalText .websiteIcon .done , .general2 .generalText .websiteIcon .done {
+    display: none;
+    justify-content: flex-end;
+}
+
+.profile .mainboxP .mainprofile .contentprofile .general .generalText .websiteIcon .cancel , .general2 .generalText .websiteIcon .cancel{
+
+    justify-content: flex-start;
+}
+
+.profile .mainboxP .mainprofile .contentprofile .general .generalText .websiteIcon i,.general2 .generalText .websiteIcon i {
+    color: white;
+    padding-left: 5px;
+    font-size: 18px;
+}
+
+
+.mainboxP .skillandactivity{
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.mainboxP .skillandactivity .myskill{
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        -ms-border-radius: 5px;
+        -o-border-radius: 5px;
+}
+.mainboxP .skillandactivity .myskill .headbox h2 , .mainboxP .skillandactivity .lastactivity .headbox h2{
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+.mainboxP .skillandactivity .myskill .headbox p ,.mainboxP .skillandactivity .lastactivity .headbox p{
+    margin-bottom: 5px;
+    font-size: 14px;
+    color: #999;
+}
+
+.mainboxP .skillandactivity .myskill .language{
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    border-bottom: 1px solid #999;
+    
+}
+
+
+
+.mainboxP .skillandactivity .myskill .language2{
+    border-bottom: none;
+}
+
+.mainboxP .skillandactivity .myskill .language p{
+    background-color: #eee;
+    padding: 4px 12px;
+    margin-bottom: 10px;
+}
+
+.mainboxP .skillandactivity .lastactivity{
+    background-color: white;
+    flex: 1;
+    padding: 20px;
+    border-radius: 5px;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        -ms-border-radius: 5px;
+        -o-border-radius: 5px;
+}
+
+.lastactivity .activtiy{
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    border-bottom: 1px solid #999;
+}
+
+.lastactivity .activtiy2 {
+    border-bottom: none;
+    margin-top: 20px;
+    
+}
+
+.lastactivity .activtiy2 .imgactivity{
+    margin-bottom: 5px;
+}
+
+.lastactivity .activtiy .imgactivity{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+
+
+
+.lastactivity .activtiy .imgactivity img{
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+
+.lastactivity .activtiy .imgactivity .activtycontent h5 , .lastactivity .activtiy .timeactivity h5{
+    font-size: 18px;
+    margin-bottom: 5px;
+    font-weight: normal;
+}
+
+.lastactivity .activtiy .imgactivity .activtycontent p , .lastactivity .activtiy .timeactivity p {
+    font-size: 14px;
+    color: #999;
+}
+
+.lastactivity .activtiy .timeactivity{
+    text-align: center;
+}
+
+.projects .mainboxs{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(350px , 1fr));
+    gap: 10px;
+    
+}
+
+
+.projects .mainboxs .box{
+    background-color: white;
+    padding: 10px;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+.projects .mainboxs .box .time{
+    color: #999;
+    text-align: right;
+    margin-bottom: 5px;
+}
+
+.projects .mainboxs .box .heading{
+    margin-bottom: 30px;
+}
+
+.projects .mainboxs .box .heading h2{
+    font-weight: normal;
+    margin-bottom: 5px;
+}
+
+.projects .mainboxs .box .heading p{
+    font-size: 12px;
+    color: #999;
+}
+.projects .mainboxs .box  .imgboxs{
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.projects .mainboxs .box .imgboxs img{
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    border: 4px solid white;
+    margin-right: -15px;
+}
+
+.projects .mainboxs .box .imgboxs img:hover{
+    z-index: 10;
+}
+
+.projects .mainboxs .box .tags{
+    display: flex;
+    margin-bottom: 20px;
+    justify-content: flex-end;
+    gap: 10px;
+    padding-top: 10px;
+    border-top: 1px solid rgb(212, 212, 212);
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgb(212, 212, 212);
+    flex-wrap: wrap;
+}
+
+.projects .mainboxs .box .tags p {
+  background-color: rgb(219, 219, 219);
+  padding: 4px 4px;
+  font-size: 16px;
+  
+}
+
+.projects .mainboxs .box .fill{
+    display: flex;
+    justify-content: space-between;
+    align-self: center;
+}
+
+.projects .mainboxs .box .fill div{
+    width: 250px;
+    height: 8px;
+    background-color:rgb(212, 212, 212) ;
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+    position: relative;
+}
+
+.projects .mainboxs .box .fill div span{
+    height: 8px;
+    background-color: red;
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+    width: 40%;
+    position: absolute;
+
+}
+
+.projects .mainboxs .box .fill2 div span{
+    height: 8px;
+    background-color: green;
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+    width: 80%;
+    position: absolute;
+}
+
+.projects .mainboxs .box .fill3 div span {
+    height: 8px;
+    background-color: blue;
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+    width: 100%;
+    position: absolute;
+}
+
+.projects .mainboxs .box .fill p{
+    position: relative;
+    top: -5px;
+}
+
+.courses .mainboxs ,.plans .mainboxs {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 10px;
+
+}
+@media(max-width:767px){
+    .courses .mainboxs,
+        .plans .mainboxs {
+            grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+        }
+        .projects .mainboxs {
+            grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+                }
+}
+
+
+.courses .mainboxs .box {
+    background-color: white;
+    overflow: hidden;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+.courses .mainboxs .box .img{
+    position: relative;
+    margin-bottom: 10px;
+}
+
+.courses .mainboxs .box .img img{
+    width: 100%;
+    height: 100%;
+}
+
+.courses .mainboxs .box .img .float{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    position:absolute;
+    top: 20px;
+    left: 20px;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    border: 4px solid white;
+}
+
+.courses .mainboxs .box .content{
+    padding: 10px;
+    border-bottom: 1px solid rgb(228, 228, 228);
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.courses .mainboxs .box .content h2{
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.courses .mainboxs .box .content p {
+    font-size: 14px;
+    color: #999;
+    margin-bottom: 20px;
+}
+
+.courses .mainboxs .box .content span {
+    display: block;
+    background-color: cornflowerblue;
+    width: fit-content;
+    padding: 10px 12px;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    left: 50%;
+    transform: translateX(-50%);
+    position: absolute;
+    bottom: -20px;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    color: white;
+}
+
+.courses .mainboxs .box .icons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+.courses .mainboxs .box .icons .user ,.courses .mainboxs .box .icons .dollar{
+    display: flex;
+    gap: 5px;
+    color: #999;
+    align-items: center;
+}
+.courses .mainboxs .box .icons .user i ,.courses .mainboxs .box .icons .dollar i{
+    color: #999;
+    font-size: 18px;
+}
+
+
+.plans .mainboxs .box {
+    background-color: white;
+    padding: 10px;
+}
+
+.plans .mainboxs .box .free , .plans .mainboxs .box .free2 , .plans .mainboxs .box .free3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgb(0, 190, 0);
+    width: 100%;
+    height: 80px;
+    color: white;
+    border: 3px solid white;
+    outline: 3px solid rgb(0, 190, 0);
+}
+
+.plans .mainboxs .box .free2{
+    background-color: rgb(74, 74, 255);
+    outline: 3px solid rgb(74, 74, 255);
+}
+.plans .mainboxs .box .free3{
+    background-color: orange;
+    outline: 3px solid orange;
+}
+
+.plans .mainboxs .box .free h4 , .plans .mainboxs .box .free2 h4 , .plans .mainboxs .box .free3 h4 {
+    margin-bottom: 10px;
+}
+
+.plans .mainboxs .box .free p ,.plans .mainboxs .box .free2 p , .plans .mainboxs .box .free3 p{
+    font-size: 20px;
+}
+
+.plans .mainboxs .box .checkdone ,.plans .mainboxs .box .checkdone2 , .plans .mainboxs .box .checkdone3{
+    margin-top: 20px;
+   
+}
+
+
+
+.plans .mainboxs .box .checkdone .paragarph , .plans .mainboxs .box .checkcancel .paragarph ,.plans .mainboxs .box .checkdone2 .paragarph,
+.plans .mainboxs .box .checkcancel2 .paragarph , .plans .mainboxs .box .checkdone3 .paragarph{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    border-bottom: 1px solid #eee;
+
+}
+
+.plans .mainboxs .box .checkdone .paragarph p , .plans .mainboxs .box .checkcancel .paragarph p,.plans .mainboxs .box .checkdone2 .paragarph p,
+.plans .mainboxs .box .checkcancel2 .paragarph p ,.plans .mainboxs .box .checkdone3 .paragarph p{
+    font-size: 14px;
+    margin-bottom: 10px;
+    position: relative;
+    font-weight: 500;
+}
+
+.plans .mainboxs .box .checkdone .paragarph p::before,.plans .mainboxs .box .checkdone2 .paragarph p::before, .plans .mainboxs .box .checkdone3 .paragarph p::before{
+    content: "\f00c";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    margin-right: 5px;
+    color: rgb(0, 190, 0);
+    
+}
+
+.plans .mainboxs .box .checkcancel .paragarph p::before,.plans .mainboxs .box .checkcancel2 .paragarph p::before{
+    content: "\f00d";
+        font-family: "Font Awesome 5 Free";
+        font-weight: 900;
+        margin-right: 5px;
+        color: red;
+}
+
+.plans .mainboxs .box .green{
+    background-color:rgb(0, 190, 0);
+    width: fit-content;
+    padding: 6px 10px;
+    font-size: 18px;
+    color: white;
+    margin-top: 10px;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+
+.plans .mainboxs .box .blue {
+    background-color: rgb(74, 74, 255);
+    width: fit-content;
+    padding: 6px 10px;
+    font-size: 18px;
+    color: white;
+    margin-top: 10px;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+
+.plans .mainboxs .box .orange {
+    background-color: orange;
+    width: fit-content;
+    padding: 6px 10px;
+    font-size: 18px;
+    color: white;
+    margin-top: 10px;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
